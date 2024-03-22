@@ -74,8 +74,7 @@ const WeatherShow = () => {
         fetchWeatherData(data[0]);
         fetchForecastData(data[0]);
 
-        const firstCity = data && data.length > 0 ? data[0] : null;
-
+        setCityObj(data[0]);
         setIsLoading(false);
         } catch (error) {
         console.error("Errore durante la richiesta API:", error);
@@ -98,7 +97,7 @@ const WeatherShow = () => {
         setCityWeatherData(weatherData);
         console.log(cityWeatherData);
         } catch (error) {
-        navigate("/notFoud");
+        navigate("/notFound");
         console.error("Errore durante la richiesta API per i dati meteo:", error);
         }
     };
@@ -118,9 +117,10 @@ const WeatherShow = () => {
         const forecastData = await response.json();
         setCityWeatherDataForecast(forecastData);
         setIsLoadingForecast(false);
+
         console.log(forecastData);
         } catch (error) {
-        navigate("/notFoud");
+        navigate("/notFound");
         console.error("Errore durante la richiesta API del meteo previsionale:", error);
         }
     };
