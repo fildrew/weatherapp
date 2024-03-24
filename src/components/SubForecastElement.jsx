@@ -30,4 +30,4 @@ const SubForecastElement = (props) => {
     )
 }
 
-export default SubForecastElement
+export default SubForecastElement;

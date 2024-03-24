@@ -16,15 +16,15 @@ const ErrorSearch = () => {
                 alt="sad cloud"
             />
             </div>
-            <h1 className="bg-error text-white display-4 p-2">
-            Errore "Sad Coud". La città che stai Cercando non si trova in Italia
+            <h1 className="bg-error text-dark  display-4 p-2">
+            Errore . La città che stai Cercando non si trova in Italia
             </h1>
         </Col>
         </Row>
         <Row>
         <Col className="text-center">
             <button
-            className="btn btn-return"
+            className="btn btn-return bg-info text-white"
             onClick={() => {
                 navigate("/");
             }}
@@ -37,4 +37,4 @@ const ErrorSearch = () => {
     )
 }
 
-export default ErrorSearch
+export default ErrorSearch;

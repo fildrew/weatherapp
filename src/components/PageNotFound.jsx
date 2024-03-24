@@ -23,7 +23,7 @@ const PageNotFound = () => {
         <Row>
             <Col className="text-center">
             <button
-                className="btn btn-return"
+                className="btn btn-return bg-primary"
                 onClick={() => {
                 navigate("/");
                 }}
